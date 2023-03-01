@@ -16,7 +16,7 @@ base_url = db_url + '/api/2.0/dbfs/delete'
 l = []
 name = input("enter File name: ")
 for file in (data['files']):
-    if name in file['path'][0:-4]:
+    if name in file['path'][::1]:
         print(file['path'])
         p = {
             'path': file['path']
